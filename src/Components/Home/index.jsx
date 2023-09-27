@@ -1,10 +1,10 @@
 import "./Home.css"
 import ListRecipes from "../ListRecipes";
 
-const Home = () => {
+const Home = (props) => {
     return (
         <main>
-            <ListRecipes />
+            <ListRecipes url={props.url}/>
         </main>
     );
 };

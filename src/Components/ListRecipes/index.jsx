@@ -2,21 +2,22 @@ import { useState,useEffect } from "react"
 import RecipeCard from "./RecipeCard";
 import "./ListRecipes.css"
 
-const ListRecipes = () => {
+const ListRecipes = (props) => {
     const [recipes,setRecipes] = useState([]);
 
     //Connecting the API
-    const [url,setUrl] = useState('https:/www.themealdb.com/api/json/v1/1/search.php?s=');
+
 
     useEffect(() => {
-        fetch(url).then(response => response.json()).then(data => {
+        fetch(props.url).then(response => response.json()).then(data => {
             setRecipes(data.meals);
         });
-    }, [url]);
+    }, [props.url]);
 
     return(
         <section className="recipes-section">
             {
+                !recipes ? "LOADING" :
                 recipes.map((recipe => <RecipeCard data={recipe} /> ))
             }
         </section>
