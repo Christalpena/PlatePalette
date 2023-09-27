@@ -4,6 +4,8 @@ import "./ListRecipes.css"
 
 const ListRecipes = () => {
     const [recipes,setRecipes] = useState([]);
+
+    //Connecting the API
     const [url,setUrl] = useState('https:/www.themealdb.com/api/json/v1/1/search.php?s=');
 
     useEffect(() => {

@@ -3,6 +3,7 @@ import Header from './Components/Header';
 import Home from './Components/Home';
 import {BrowserRouter, Routes,Route} from "react-router-dom"
 import Page404 from './Components/Page404';
+import RecipeInf from './Components/RecipeInf';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path='/:RecipeId' element={<RecipeInf />}></Route>
         <Route path='*' element={<Page404 />}></Route>
       </Routes>
     </BrowserRouter>
