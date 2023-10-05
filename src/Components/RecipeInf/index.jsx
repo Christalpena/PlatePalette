@@ -20,8 +20,8 @@ const RecipeInf = () => {
     return(
         <section className="container-section">
             <div className="recipe">
-            <h1 className="recipe-information__title">{strMeal}</h1>
-            <hr className="line" />
+                <h1 className="recipe-information__title">{strMeal}</h1>
+                <hr className="line" />
                 <div className="recipe-information">
                 <img src={strMealThumb} alt={strMeal} className="recipe__img"></img>
 
@@ -44,7 +44,7 @@ const RecipeInf = () => {
                     </div>
 
                 </div>
-            <hr className="line" />
+                <hr className="line" />
                 <div className="recipe-instructions">
                         <h1>INSTRUCTIONS</h1>
                         <p>{strInstructions}</p>
