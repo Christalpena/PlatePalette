@@ -15,11 +15,16 @@ const ListRecipes = (props) => {
     }, [props.url]);
 
     return(
-        <section className="recipes-section">
+        <section>
+            <div className="slogan-container">
+            <h1 className="slogan">Más rápido y delicioso. </h1>
+            </div>
+            <div  className="recipes-section">
             {
                 !recipes ? "LOADING" :
-                recipes.map((recipe => <RecipeCard data={recipe} /> ))
+                recipes.map(((recipe,index) => <RecipeCard key={index} data={recipe} /> ))
             }
+            </div>
         </section>
     )
 };

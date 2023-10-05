@@ -20,10 +20,10 @@ const RecipeInf = () => {
     return(
         <section className="container-section">
             <div className="recipe">
-                <img src={strMealThumb} alt={strMeal} className="recipe__img"></img>
+            <h1 className="recipe-information__title">{strMeal}</h1>
+            <hr className="line" />
                 <div className="recipe-information">
-                    <h1 className="recipe-information__title">{strMeal}</h1>
-                    <hr></hr>
+                <img src={strMealThumb} alt={strMeal} className="recipe__img"></img>
 
                     <div className="recipe-ingredients">
                         <h1>INGREDIENTS</h1>
@@ -42,15 +42,16 @@ const RecipeInf = () => {
                             })}
                             </ul>
                     </div>
-                    <hr></hr>   
-                    <div className="recipe-instructions">
-                        <h1>INSTRUCTIONS</h1>
-                        <p>{strInstructions}</p>
-                    </div>
-                    <hr></hr>
-                    <span>{strTags}</span>
 
                 </div>
+            <hr className="line" />
+                <div className="recipe-instructions">
+                        <h1>INSTRUCTIONS</h1>
+                        <p>{strInstructions}</p>
+                        <span>{strTags}</span>
+
+                </div>
+
             </div>
         </section>
     )
