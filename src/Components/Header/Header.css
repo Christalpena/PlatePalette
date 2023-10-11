@@ -5,7 +5,6 @@
 
 .header__img{
     width: 100%;
-    box-shadow: 0px 0px 6px 5px rgb(168, 163, 163);
 }
 
 .header__title{
@@ -17,9 +16,10 @@
     font-weight: 700;
     font-size:5rem;
     font-family: 'Pacifico', cursive;
-    outline: solid black;
+    outline: solid rgb(255, 240, 250);
     padding: 0px 15px 0px 15px;
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.329);
     
 }
 .form{
@@ -55,19 +55,19 @@
     height: 100%;
 }
 
-@media screen and (max-width:1802px){
-    .header__title{
-        font-size:4rem;
-        top: 35%;
-    }
 
-    
-    .form__search-input{
-        font-size: 0.9rem;
-    }
-    
+.header-filter{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(255, 240, 250);
+    box-shadow: 0px 0px 6px 3px rgb(241, 240, 241);
+    margin-top: -2px;
 }
 
+.header-filter__item{
+    display: flex;
+    cursor: pointer;
+}
 
 @media screen and (max-width:1385px){
     .header__title{
@@ -77,12 +77,17 @@
     
 }
 
+@media screen and (max-width:1237px){
+
+}
+
+
 @media screen and (max-width:992px) {
     
     .header__title{
         font-weight: 400;
         font-size:3.5rem;
-        top: 50%;
+        top: 40%;
     }
 }
 
@@ -93,6 +98,7 @@
         font-size:3.5rem;
         top: 40%;
         outline: none;
+        background-color: transparent;
     }
 
     .form{

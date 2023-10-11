@@ -8,6 +8,7 @@ import {BsSearchHeartFill} from "react-icons/bs"
 const Header = (props) => {
     const navigate = useNavigate();
     const [searchInf,setSearchInf] = useState("");
+    const [ingredient,setIngredient] = useState(['Bread','Ham','Milk','Eggs','Garlic'])
     const driveEvent = (event) =>{
         event.preventDefault();
         setSearchInf(event.target.value);
@@ -23,6 +24,11 @@ const Header = (props) => {
         navigate('/');
     };
 
+    const p = (e,item) => {
+        props.setUrl(`https:/www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient[item]}`)
+        navigate('/');
+    }
+
     return(
         <header className="header">
             <div className="form" >
@@ -31,6 +37,14 @@ const Header = (props) => {
             </div>
             <img className="header__img" src="/img/Header.jpg" alt="page-img"></img>
             <h1 className="header__title" onClick={click}>Plate Palette</h1>
+            <div className="header-filter">
+                {
+                    ingredient.map((item,index) =>
+                    <h3 onClick={(e) => p(e,index)} key={index} className="header-filter__item">{item}</h3>
+                    
+                    )
+                }
+            </div>
         </header>
     )
 };

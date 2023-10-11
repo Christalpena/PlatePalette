@@ -16,9 +16,6 @@ const ListRecipes = (props) => {
 
     return(
         <section>
-            <div className="slogan-container">
-            <h1 className="slogan">Más rápido y delicioso. </h1>
-            </div>
             <div  className="recipes-section">
             {
                 !recipes ? "LOADING" :

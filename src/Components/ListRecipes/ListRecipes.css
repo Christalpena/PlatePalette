@@ -1,22 +1,12 @@
-.slogan-container{
-    margin-top: -8rem;
-    position: relative;
-}
-.slogan{
-    text-align: center;
-    font-size: 3rem;
-    border-radius: 20px;
-    width: 40%;
-    height: 6rem;
-    margin: auto;
-    padding: 5rem;
-    background-color: rgb(252, 252, 252);
-    font-family: 'Pacifico', cursive;
+
+.line{
+    background-color: wheat;
+
 }
 .recipes-section{
     display: flex;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 4rem;
     margin-left: 4rem;
     margin-right: 4rem;
     flex-wrap: wrap;
@@ -34,7 +24,6 @@
     height: 22rem;
     padding: 2rem;
     font-size: 15px;
-
 }
 
 .container__img{
@@ -49,42 +38,6 @@
 .container__tags{
     color: gray;
     font-weight: 500;
-}
-
-@media screen and (max-width:1479px){
-    .slogan{
-        padding: 4rem;
-    }
-
-    .slogan-container{
-        margin-top: -7rem;
-
-    }
-    
-}
-
-@media screen and (max-width:1385px){
-    .slogan{
-        padding: 3rem;
-    }
-
-    .slogan-container{
-        margin-top: -4rem;
-
-    }
-    
-}
-
-@media screen and (max-width:1237px){
-    .slogan{
-        display: none;
-    }
-
-    .slogan-container{
-        display: none;
-
-    }
-    
 }
 
 @media screen and (max-width:936px){
@@ -133,6 +86,7 @@
     }
 
 }
+
 
 @media screen and (max-width:500px){
 
