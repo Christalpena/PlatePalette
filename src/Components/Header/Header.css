@@ -51,7 +51,7 @@
     border-color: transparent;
     padding-left: 1rem;
     padding-right: 1rem;
-    background-color: rgb(255, 240, 250);
+    background-color: rgb(251, 224, 242);
     height: 100%;
 }
 
@@ -59,9 +59,9 @@
 .header-filter{
     display: flex;
     justify-content: space-around;
-    background-color: rgb(255, 240, 250);
+    background-color: rgb(251, 224, 242);
     box-shadow: 0px 0px 6px 3px rgb(241, 240, 241);
-    margin-top: -2px;
+    margin-top: -4px;
 }
 
 .header-filter__item{
@@ -127,6 +127,9 @@
     .form__search-input{
         font-size: 0.8rem;
     }
+    .header-filter__item{
+        font-size: small;
+    }
 }
 
 
@@ -134,7 +137,7 @@
 
     .header__title{
         font-size:2rem;
-
+        top: 36%;
     }
 }
 
@@ -142,7 +145,7 @@
 
     .header__title{
         font-size:1.8rem;
-        top: 45%;
+        top: 36%;
 
     }
     .form{

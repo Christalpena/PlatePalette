@@ -18,7 +18,11 @@ const ListRecipes = (props) => {
         <section>
             <div  className="recipes-section">
             {
-                !recipes ? "LOADING" :
+                !recipes ? 
+                <div className="not-found">
+                    <img className="not-found__img" src="img/food-not-found.png" alt="food-not-found"></img>
+                    <h1 className="not-found__title">SORRY, WE COULDN'T FIND ANYTHING</h1>
+                </div> :
                 recipes.map(((recipe,index) => <RecipeCard key={index} data={recipe} /> ))
             }
             </div>

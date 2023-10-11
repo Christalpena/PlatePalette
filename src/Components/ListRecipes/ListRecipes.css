@@ -1,14 +1,7 @@
-
-.line{
-    background-color: wheat;
-
-}
 .recipes-section{
     display: flex;
     align-items: center;
-    margin-top: 4rem;
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin: 5rem 0.5rem -4rem 0.5rem;
     flex-wrap: wrap;
     justify-content: space-around;
 
@@ -34,10 +27,25 @@
 
 }
 
-
 .container__tags{
     color: gray;
     font-weight: 500;
+}
+
+.not-found__img{
+    height:400px;
+    margin: auto;
+    width: 100%;
+}
+
+.not-found__title{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.line{
+    background-color: wheat;
+
 }
 
 @media screen and (max-width:936px){

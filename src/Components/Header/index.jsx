@@ -8,14 +8,17 @@ import {BsSearchHeartFill} from "react-icons/bs"
 const Header = (props) => {
     const navigate = useNavigate();
     const [searchInf,setSearchInf] = useState("");
-    const [ingredient,setIngredient] = useState(['Bread','Ham','Milk','Eggs','Garlic'])
+    const [ingredient,setIngredient] = useState(['Bread','Ham','Milk','Eggs','Garlic']);
+
     const driveEvent = (event) =>{
         event.preventDefault();
         setSearchInf(event.target.value);
     };
-    const newUrl = () =>[
+    const newUrl = () =>{
         props.setUrl(`https:/www.themealdb.com/api/json/v1/1/filter.php?i=${searchInf}`)
-    ];
+        navigate('/');
+
+    };
 
     const url = 'https:/www.themealdb.com/api/json/v1/1/search.php?s=';
 

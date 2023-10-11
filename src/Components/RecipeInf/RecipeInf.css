@@ -41,7 +41,7 @@
     font-size:3rem;
     font-family: 'Pacifico', cursive;
     text-align: center;
-    background-color: rgb(255, 240, 250);
+    background-color: rgb(251, 224, 242);
     padding-bottom: 15px;
 }
 
@@ -60,6 +60,17 @@
 
 .line{
     width: 90%;
+}
+
+.not-found__img{
+    height:400px;
+    margin: auto;
+    width: 100%;
+}
+
+.not-found__title{
+    text-align: center;
+    margin-bottom: 5rem;
 }
 
 @media screen and (max-width: 941px){
