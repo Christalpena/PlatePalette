@@ -5,15 +5,16 @@ import Page404 from "../Page404";
 
 const RecipeInf = (props) => {
     const {RecipeId} = useParams();
-    const [recipeInf, setRecipeInf] = useState('')
+    const [recipeInf, setRecipeInf] = useState('');
+    const [page404,setPage404] = useState(false)
 
     useEffect(() => {
         fetch(`https:/www.themealdb.com/api/json/v1/1/lookup.php?i=${RecipeId}`).then((response) => response.json()).then(data => {
             setRecipeInf(data.meals[0]);
         }).catch((error) => {
-            console.log(error)
+            setPage404(true)
         });
-    }, []);
+    }, [RecipeId]);
 
     const {strMeal,strMealThumb,strInstructions,strTags} = recipeInf;
     
@@ -21,7 +22,7 @@ const RecipeInf = (props) => {
         <section>
             {
             //Checking if recipeInf has something
-            recipeInf ?
+            recipeInf || page404 === false ?
             <div className="container-section">
                 <div className="recipe">
                     <img src={strMealThumb} alt={strMeal} className="recipe__img"></img>
@@ -52,15 +53,13 @@ const RecipeInf = (props) => {
                     <div className="recipe-instructions">
                         <h1>INSTRUCTIONS</h1>
                         <p>{strInstructions}</p>
-                        <span>{strTags}</span>
+                        <span className="recipe-instructions__tags">{strTags}</span>
                     </div>
                 </div>
             </div>
             //if not
             :
-            setTimeout(() => {
                 <Page404 />
-            },1000)
             }
         </section>
     )

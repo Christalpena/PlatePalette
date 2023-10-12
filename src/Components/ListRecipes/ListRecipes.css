@@ -43,10 +43,6 @@
     margin-bottom: 5rem;
 }
 
-.line{
-    background-color: wheat;
-
-}
 
 @media screen and (max-width:936px){
     .recipes-section{

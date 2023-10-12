@@ -9,6 +9,7 @@
 .recipe{
     display: flex;
     flex-direction: column;
+    padding-bottom: 1rem;
 }
 .recipe-information{
     width: 90%;
@@ -23,6 +24,11 @@
     margin: auto;
     font-size: 1.3rem;
 
+}
+
+.recipe-instructions__tags{
+    color: wheat;
+    font-weight: bold;
 }
 
 .recipe-instructions h1{
@@ -43,6 +49,7 @@
     text-align: center;
     background-color: rgb(251, 224, 242);
     padding-bottom: 15px;
+    padding: 5px 10px;
 }
 
 .recipe-ingredients ul li{
@@ -74,6 +81,9 @@
 }
 
 @media screen and (max-width: 941px){
+    .recipe-information__title{
+        font-size: 2rem;
+    }
     .recipe__img{
         height: 300px;
     }
@@ -94,9 +104,20 @@
     }
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width:668px){
+    .recipe-information__title{
+        font-size: 1.8rem;
+    }
+    
+}
+@media screen and (max-width: 500px){
     .recipe__img{
         height: 200px;
     }
+
+    .recipe-information__title{
+        font-size: 1.5rem;
+    }
+
 }
 

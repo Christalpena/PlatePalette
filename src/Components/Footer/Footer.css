@@ -43,6 +43,7 @@
 @media screen and (max-width:864px){
     .footer{
         flex-direction: column;
+        padding: 3rem 0px;
     }
     .footer__container {
         justify-content: center;
@@ -52,3 +53,25 @@
         display: none;
     }
 }
+
+@media screen and (max-width:720px) {
+    .footer{
+        flex-direction: column;
+        padding: 3rem 0px;
+    }
+
+    .footer__container__img{
+        width: 250px;
+
+    }
+    
+    .footer__container__icon{
+        width: 40px;    
+    }
+
+    .footer h1{
+        font-size: x-large;
+    }
+    
+}
+
